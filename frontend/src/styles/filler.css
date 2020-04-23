@@ -11,23 +11,46 @@
 
 .now-playing-container {
   margin-left: 5%;
-  margin-top: auto;
+  margin-top: 2%;
   margin-bottom: auto;
 
   align-self: flex-start;
   color: #ffffff4d;
-  font-size: 24px;
+  font-size: 20px;
 }
 
-.now-playing span {
+.now-playing-container span {
   color: #ffffff4d;
-  font-weight: bold;
+  font-weight: bold;  
 }
 
-.now-playing {
-
-}
-
-.now-playing span.text-highlight {
+.now-playing-container span.highlight {
   color: #ffffff93;
+}
+
+.visible {
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
 }

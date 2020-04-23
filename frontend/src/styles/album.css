@@ -1,5 +1,5 @@
 .album-container {
-  margin-bottom: 20px;
+  margin: 20px;
 
   display: flex;
   flex-direction: column;
@@ -10,7 +10,7 @@
 .album-container img {
   background-color: white;
   padding: 5px;
-  width: 15rem;
+  width: 12rem;
   height: auto;
 
   box-shadow: 5px 5px 10px 1px #1312126b;
