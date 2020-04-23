@@ -6,9 +6,14 @@ const url ='mongodb://mongo-server:27017/SoundOcean';
 
 const Song = require('../models/song');
 const User = require('../models/user');
+const Album = require('../models/album')
 
 const setupDB = async () => {
   await mongoose.connect(url, { useNewUrlParser: true });
+  // Create Album collection
+  if ( ! await Album.exists() ) {
+    await Album.createCollection();
+  }
   // Create Song collection and insert initial data
   if ( ! await Song.exists() ) {
     await Song.createCollection();

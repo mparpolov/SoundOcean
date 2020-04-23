@@ -1,0 +1,30 @@
+.song-container {
+  height: 60px;
+  width: 100%;
+  padding-left: 10%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  transition: linear 0.2s;
+}
+
+.song-container:hover {
+  cursor: pointer;
+  background-color: #200e3b;
+}
+
+.song-info {
+  margin-left: 5%;
+  display: flex;
+  align-items: center;
+
+  font-size: 16px;
+  color: #29aca3d9;
+}
+
+.highlight {
+  background-color: #11504c59 !important;
+  border-left: 3px solid #a407ec;
+}

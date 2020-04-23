@@ -6,6 +6,7 @@ COPY package.json .
 RUN  npm install
 
 COPY  src ./src
-COPY .env .
+COPY  public ./public
+COPY  .env .
 
 CMD ["npm", "run", "start-prod"]

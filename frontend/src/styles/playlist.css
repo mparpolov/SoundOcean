@@ -1,0 +1,31 @@
+.playlist-panel h1 {
+  width: 100%;
+  height: 100px;
+  padding-left: 10%;
+
+  color: #28e9ddd9;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.playlist-panel h2 {
+  width: 100%;
+  height: 60px;
+  padding-left: 10%;
+
+  font-size: 24px;
+  color: #28e9ddd9;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.playlist-container {
+  width: 100%;
+  
+  font-size: 20px;
+  color: #28e9ddd9;
+}

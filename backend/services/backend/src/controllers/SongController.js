@@ -20,15 +20,14 @@ const SongController = {
       res.writeHead(200, {
         'Content-Type': 'audio/mpeg',
         'Content-Length': size
-      });
-
+      });;
       // Pipe file to response
       const readStream = fs.createReadStream(filePath);
       readStream.pipe(res);
     } else {
       res.status(400).json({ message: 'Song not found.' });
     }
-    return mongoose.connection.close();
+    mongoose.connection.close();
   }
 }
 

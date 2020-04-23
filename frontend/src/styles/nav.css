@@ -1,0 +1,43 @@
+header {
+  width: 100%;
+}
+
+header nav ul {
+  height: 100px;
+
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav ul li {
+  margin: 5%;
+  font-size: 24px;
+  color: #ffffff4d;
+}
+
+header nav ul li input {
+  margin-left: 5%;
+  font-size: 24px;
+  background: transparent;
+  border: none;
+
+  color: #ffffff4d;
+}
+
+.search-bar {
+  width: 500px;
+  height: 40px;
+
+  line-height: 59px;
+  display: flex;
+  align-items: center;
+
+  background: #ffffff1a;
+  border-radius: 18px;
+}
+
+.search-bar svg {
+  margin-left: 3%;
+}
