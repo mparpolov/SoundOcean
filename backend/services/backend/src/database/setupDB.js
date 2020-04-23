@@ -19,10 +19,11 @@ const setupDB = async () => {
     await Song.createCollection();
     // Insert available songs into collection
     const songs = [];
-    for ( let song of (await fs.readdirSync(path.join(__dirname, '../', 'assets/music'))) ) {
+    for ( let song of (await fs.readdirSync(path.join(path.dirname(process.mainModule.filename), '../', 'music'))) ) {
       songs.push({
         name: song,
-        path: path.join(__dirname, '../', 'assets/music')
+        album: null,
+        path: path.join(path.dirname(process.mainModule.filename), '../', 'music')
       });
     }
     Song.collection.insertMany(songs);

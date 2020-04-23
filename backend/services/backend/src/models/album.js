@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Album = mongoose.Schema({
   _id: mongoose.Types.ObjectId,
-  author: String,
+  artist: String,
   title: String
 });
 

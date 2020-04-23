@@ -1,4 +1,5 @@
 .albums-panel {
+  width: 100%;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -6,4 +7,27 @@
   flex-wrap: wrap;
 
   margin-top: auto;
+}
+
+.now-playing-container {
+  margin-left: 5%;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  align-self: flex-start;
+  color: #ffffff4d;
+  font-size: 24px;
+}
+
+.now-playing span {
+  color: #ffffff4d;
+  font-weight: bold;
+}
+
+.now-playing {
+
+}
+
+.now-playing span.text-highlight {
+  color: #ffffff93;
 }

@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
-const url ='mongodb://mongo-server:27017/SoundOcean';
+const url = 'mongodb://mongo-server:27017/SoundOcean';
 
 const Song = require('../models/song');
 
 const SongsController = {
   index: async (req, res) => {
     await mongoose.connect(url, { useNewUrlParser: true });
-    const songs = await Song.find({}, 'name');
+    const songs = await Song.find({});
     if ( songs ) {
       songs.sort((a, b) => a.name.localeCompare(b.name));
       res.json(songs);

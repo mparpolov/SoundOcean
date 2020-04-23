@@ -1,7 +1,7 @@
 const crypto = require('crypto');
 
 const mongoose = require('mongoose');
-const url ='mongodb://mongo-server:27017/SoundOcean';
+const url = 'mongodb://mongo-server:27017/SoundOcean';
 
 const User = require('../models/user');
 

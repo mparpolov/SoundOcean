@@ -8,10 +8,10 @@ services:
       - music:/app/music
     ports:
       - "3001:3001"
-  # ripper-service:
-  #   build: ./reaper
-  #   volumes:
-  #     - music:/app/music
+  reaper-service:
+    build: ./reaper
+    volumes:
+      - music:/app/music
 
 volumes:
   music:

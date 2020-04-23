@@ -4,8 +4,12 @@ import Reducer from '../reducers/Reducer';
 const initialState = {
   playing: false,
   trackName: null,
+  albumName: null,
+  albumID: null,
   duration: 0,
-  currentTime: 0, 
+  currentTime: 0,
+  albums: [],
+  tracks: [],
   error: null
 };
 

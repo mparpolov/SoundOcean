@@ -8,22 +8,26 @@
 }
 
 .album-container img {
-  width: 17rem;
+  background-color: white;
+  padding: 5px;
+  width: 15rem;
   height: auto;
 
-  filter: grayscale(100%);
   box-shadow: 5px 5px 10px 1px #1312126b;
-
-  transition: linear 0.5s;
+  filter: grayscale(30%);
+  
+  transition: linear 0.2s;
 }
 
 .album-container img:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 3px #00a2d3dc;
   filter: grayscale(0%);
 }
 
 .album-info-container {
   width: 100%;
-  margin-top: 2%;
+  margin-top: 10px;
 
   display: flex;
   flex-direction: column;
