@@ -8,8 +8,8 @@
 }
 
 .album-container img {
-  /* background-color: white; */
-  /* padding: 5px; */
+  background-color: #a013d8ab;
+  padding: 2px;
   width: 13rem;
   height: auto;
 
@@ -20,7 +20,7 @@
 
 .album-container img:hover {
   cursor: pointer;
-  box-shadow: 0px 0px 10px 3px #00a2d3dc;
+  box-shadow: 0px 0px 10px 5px #00a2d3dc;
 }
 
 .album-info-container {

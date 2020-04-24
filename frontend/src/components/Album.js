@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
-
 import { Context } from '../store/Store';
+
+import axios from 'axios';
 
 import albumArtMissingImage from '../assets/album-art-missing.png';
 
@@ -23,11 +24,25 @@ const Album = props => {
     setCoverArt(albumArtMissingImage); 
   }
 
+  const chooseAlbumArt = async e => {
+    e.preventDefault();
+    const imageUrl = prompt('Insert the url for the cover art');
+    if ( imageUrl ) {
+      try {
+        await axios.post(`http://192.168.0.8:3001/album/${props.id}/cover`, { imageUrl: imageUrl });
+        alert('Done!');
+      } catch (err) {
+        alert(err);
+      }
+    }
+  }
+
   return (
     <div className="album-container">
       <img 
         src={coverArt}
         onClick={choseAlbum}
+        onContextMenu={chooseAlbumArt}
         onError={switchToDefaultImage}
       />
       <div className="album-info-container">
