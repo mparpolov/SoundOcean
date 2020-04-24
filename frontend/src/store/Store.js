@@ -23,4 +23,5 @@ const Store = ({children}) => {
 };
 
 export const Context = createContext(initialState);
+export { initialState };
 export default Store;

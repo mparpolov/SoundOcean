@@ -26,6 +26,26 @@ header nav ul li input {
   color: #ffffff4d;
 }
 
+header nav ul li button {
+  height: 40px;
+
+  margin-left: 10%;
+  font-size: 24px;
+  background-color: transparent;
+
+  border: none;
+
+  line-height: 2.5rem;
+  color: #ffffff4d;
+
+  transition: linear 0.2s;
+}
+
+header nav ul li button:hover {
+  cursor: pointer;
+  color: #ffffff93;
+}
+
 .search-bar {
   width: 500px;
   height: 40px;

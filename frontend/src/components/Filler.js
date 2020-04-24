@@ -5,8 +5,6 @@ import Nav from './Nav';
 import Player from './Player';
 import Album from './Album';
 
-import albumArtMissingImage from '../assets/album-art-missing.png';
-
 import '../styles/filler.css';
 
 const Filler = props => {
@@ -16,11 +14,15 @@ const Filler = props => {
   const [artist, setArtist] = useState('');
 
   useEffect(() => {
-    if ( state.playing && state.trackName && state.albumArtist ) {
+    if ( state.playing && 
+         state.trackName && 
+         state.albumArtist
+      ) {
+
       setVisible(true);
       setTrackName(state.trackName);
       setArtist(state.albumArtist);
-    } else {
+    } else if ( !state.playing && state.currentTime === 0 ) {
       setVisible(false);
     }
   }, [state.playing]);
@@ -42,7 +44,7 @@ const Filler = props => {
               id={album._id}
               title={album.title}
               artist={album.artist}
-              coverArt={albumArtMissingImage}/>
+              coverArt={album.cover}/>
           );
         })}
       </section>

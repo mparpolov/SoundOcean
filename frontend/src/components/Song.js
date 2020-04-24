@@ -7,6 +7,7 @@ import { IoIosMusicalNote } from 'react-icons/io';
 import fetchAudio from '../util/fetchAudio';
 
 import '../styles/song.css';
+import Album from './Album';
 
 const Song = props => {
   const [state, dispatch] = useContext(Context);
@@ -74,9 +75,9 @@ const Song = props => {
     >
       <p><IoIosMusicalNote />{props.name}</p>
       <div className="song-info">
-        <span>Some Artist</span> 
+        <span>{props.album.title}</span> 
         <BsDot />
-        <span>Some Album</span>
+        <span>{props.album.artist}</span>
       </div>
     </div>
   );

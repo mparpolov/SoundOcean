@@ -8,7 +8,9 @@ import '../styles/playlist.css';
 
 const Playlist = props => {
   const [state, dispatch] = useContext(Context);
+
   const [playlist, setPlaylist] = useState([]);
+  const [album, setAlbum] = useState({});
 
   useEffect(() => {
     const { tracks, albums, albumID } = state;
@@ -16,6 +18,7 @@ const Playlist = props => {
     if ( tracks && albums ) {
       const album = albums.filter(album => album._id === albumID );
       const playlist = tracks.filter(track => track.album === albumID);
+      setAlbum(album[0]);
       setPlaylist(playlist);
     }
   }, [state.albumID]);
@@ -25,7 +28,14 @@ const Playlist = props => {
       <h1>Sound Ocean</h1>
       <h2>Playlist</h2>
       <section className="playlist-container">
-        {playlist.map(song => <Song key={song._id} name={song.name.replace(/\.mp3/g, '')} id={song._id} />)}
+        {playlist.map(song => 
+          <Song 
+            key={song._id}
+            name={song.name.replace(/\.mp3/g, '')}
+            album={album}
+            id={song._id} 
+          />
+        )}
       </section>
     </div>
   );

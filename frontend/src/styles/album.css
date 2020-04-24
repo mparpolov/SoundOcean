@@ -8,13 +8,12 @@
 }
 
 .album-container img {
-  background-color: white;
-  padding: 5px;
-  width: 12rem;
+  /* background-color: white; */
+  /* padding: 5px; */
+  width: 13rem;
   height: auto;
 
   box-shadow: 5px 5px 10px 1px #1312126b;
-  filter: grayscale(30%);
   
   transition: linear 0.2s;
 }
@@ -22,7 +21,6 @@
 .album-container img:hover {
   cursor: pointer;
   box-shadow: 0px 0px 10px 3px #00a2d3dc;
-  filter: grayscale(0%);
 }
 
 .album-info-container {
@@ -45,4 +43,3 @@
 .album-info-container span.artist {
   color: #29aca3d9;
 }
-

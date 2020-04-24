@@ -53,6 +53,7 @@ const SongController = {
       // Check if album already exist in db
       let albumInfo = await Album.findOne(album);
       if ( _.isEmpty(albumInfo) ) {
+        album.cover = null; // No cover when creating
         albumInfo = await Album.collection.insert(album);
         albumInfo = albumInfo.ops[0]; // Extract _id from result
       }

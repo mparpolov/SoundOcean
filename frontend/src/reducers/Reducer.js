@@ -1,3 +1,5 @@
+import initialState from '../store/Store';
+
 const Reducer = (state, action) => {
   switch (action.type) {
     case 'SET_TRACK_METADATA':
@@ -39,7 +41,9 @@ const Reducer = (state, action) => {
       return {
         ...state,
         albums: action.payload
-      };          
+      };
+    case 'USER_LOGOUT':
+      return initialState;           
     case 'SET_ERROR':
       return {
         ...state,

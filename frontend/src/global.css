@@ -12,3 +12,18 @@ body {
   background: #f0f0f5;
   -webkit-font-smoothing: antialiased;
 }
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+
+  font-size: 24px;
+  color: #ffffff85;
+  border-bottom: 2px solid #ffffff4d;
+  background-color: transparent;
+}
+
+::placeholder {
+  color: #ffffff4d;
+}

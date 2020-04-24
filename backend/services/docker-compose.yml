@@ -6,6 +6,7 @@ services:
     build: ./backend
     volumes:
       - music:/app/music
+      - images:/app/public/images
     ports:
       - "3001:3001"
   reaper-service:
@@ -15,3 +16,4 @@ services:
 
 volumes:
   music:
+  images:

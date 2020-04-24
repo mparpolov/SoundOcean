@@ -14,16 +14,17 @@ const Home = () => {
   const [albums, setAlbums] = useState([]);
 
   useEffect(() => {
-    axios.get('http://192.168.0.8:3001/songs')
+    axios.get('http://192.168.0.8:3001/albums')
+    .then(res => {
+      dispatch({ type: 'SET_ALBUMS_LIST', payload: res.data });
+      setAlbums(res.data);
+      
+      axios.get('http://192.168.0.8:3001/songs')
       .then(res => {
         dispatch({ type: 'SET_TRACKS_LIST', payload: res.data });
         setSongs(res.data);
       });
-    axios.get('http://192.168.0.8:3001/albums')
-      .then(res => {
-        dispatch({ type: 'SET_ALBUMS_LIST', payload: res.data });
-        setAlbums(res.data);
-      })
+    })
   }, []);
 
   return (
