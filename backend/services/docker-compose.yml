@@ -2,6 +2,8 @@ version: '3'
 services:
   mongo-server:
     image: 'mongo'
+    volumes:
+      - mongo-volume:/data/db
   backend-service:
     build: ./backend
     volumes:
@@ -17,3 +19,4 @@ services:
 volumes:
   music:
   images:
+  mongo-volume:

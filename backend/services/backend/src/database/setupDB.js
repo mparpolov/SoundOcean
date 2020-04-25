@@ -19,14 +19,16 @@ const setupDB = async () => {
     await Song.createCollection();
     // Insert available songs into collection
     const songs = [];
-    for ( let song of (await fs.readdirSync(path.join(path.dirname(process.mainModule.filename), '../', 'music'))) ) {
+    for ( let song of fs.readdirSync(path.join(path.dirname(process.mainModule.filename), '../', 'music')) ) {
       songs.push({
         name: song,
         album: null,
         path: path.join(path.dirname(process.mainModule.filename), '../', 'music')
       });
     }
-    Song.collection.insertMany(songs);
+    if ( songs.length > 0 ) {
+      Song.collection.insertMany(songs);
+    }
   }
   // Create User collection and insert initial data
   if ( ! await User.exists() ) {
